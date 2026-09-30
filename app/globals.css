@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+:root {
+  --background: #e3dcdc;
+  --foreground: #171717;
+
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #d3d6d9;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #e1e3e5;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   ACCENT COLORS
+   ========================================================= */
+
+/* BLUE */
+
+html[data-accent="blue"] {
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #d2d4d8;
+}
+
+
+/* GREEN */
+
+html[data-accent="green"] {
+  --accent-color: #16a34a;
+  --accent-hover: #15803d;
+  --accent-light: #c2c6cc;
+}
+
+
+/* PURPLE */
+
+html[data-accent="purple"] {
+  --accent-color: #9333ea;
+  --accent-hover: #7e22ce;
+  --accent-light: #dddfe2;
+}
+
+
+/* ORANGE */
+
+html[data-accent="orange"] {
+  --accent-color: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-light: #dddfe2;
+}
+
+
+/* =========================================================
+   GLOBAL ACCENT UTILITY CLASSES
+   ========================================================= */
+
+.accent-bg {
+  background-color: var(--accent-color);
+}
+
+.accent-bg:hover {
+  background-color: var(--accent-hover);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.accent-border {
+  border-color: var(--accent-color);
+}
+
+.accent-light-bg {
+  background-color: var(--accent-light);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+html.dark body {
+  background-color: #111827;
+  color: #feffff;
+}
+
+
+/* Main backgrounds */
+
+html.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-gray-100 {
+  background-color: #374151 !important;
+}
+
+
+/* Text */
+
+html.dark .text-gray-900 {
+  color: #2364c5 !important;
+}
+
+html.dark .text-gray-800 {
+  color: #3575d5 !important;
+}
+
+html.dark .text-gray-700 {
+  color: #0e67ed !important;
+}
+
+html.dark .text-gray-600 {
+  color: #3260a4 !important;
+}
+
+html.dark .text-gray-500 {
+  color: #3c67a7 !important;
+}
+
+
+/* Borders */
+
+html.dark .border-gray-200 {
+  border-color: #374151 !important;
+}
+
+html.dark .border-gray-100 {
+  border-color: #374151 !important;
+}
+
+
+/* Inputs */
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1f2937;
+  color: #dddfe2;
+  border-color: #374151;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #4f5357;
+}
+
+
+/* =========================================================
+   ACCENT OVERRIDES
+   ========================================================= */
+
+/*
+ * These make existing StudyTrack components
+ * that still use Tailwind's blue classes follow
+ * the selected accent.
+ */
+
+
+/* ---------- GREEN ---------- */
+
+html[data-accent="green"] .bg-blue-500 {
+  background-color: #16a34a !important;
+}
+
+html[data-accent="green"] .bg-blue-600 {
+  background-color: #16a34a !important;
+}
+
+html[data-accent="green"] .hover\:bg-blue-700:hover {
+  background-color: #15803d !important;
+}
+
+html[data-accent="green"] .bg-blue-50 {
+  background-color: #dddfe2 !important;
+}
+
+html[data-accent="green"] .text-blue-500 {
+  color: #16a34a !important;
+}
+
+html[data-accent="green"] .text-blue-600 {
+  color: #16a34a !important;
+}
+
+html[data-accent="green"] .border-blue-600 {
+  border-color: #16a34a !important;
+}
+
+
+/* ---------- PURPLE ---------- */
+
+html[data-accent="purple"] .bg-blue-500 {
+  background-color: #9333ea !important;
+}
+
+html[data-accent="purple"] .bg-blue-600 {
+  background-color: #9333ea !important;
+}
+
+html[data-accent="purple"] .hover\:bg-blue-700:hover {
+  background-color: #7e22ce !important;
+}
+
+html[data-accent="purple"] .bg-blue-50 {
+  background-color: #dddfe2 !important;
+}
+
+html[data-accent="purple"] .text-blue-500 {
+  color: #9333ea !important;
+}
+
+html[data-accent="purple"] .text-blue-600 {
+  color: #9333ea !important;
+}
+
+html[data-accent="purple"] .border-blue-600 {
+  border-color: #9333ea !important;
+}
+
+
+/* ---------- ORANGE ---------- */
+
+html[data-accent="orange"] .bg-blue-500 {
+  background-color: #ea580c !important;
+}
+
+html[data-accent="orange"] .bg-blue-600 {
+  background-color: #ea580c !important;
+}
+
+html[data-accent="orange"] .hover\:bg-blue-700:hover {
+  background-color: #c2410c !important;
+}
+
+html[data-accent="orange"] .bg-blue-50 {
+  background-color: #dddfe2 !important;
+}
+
+html[data-accent="orange"] .text-blue-500 {
+  color: #ea580c !important;
+}
+
+html[data-accent="orange"] .text-blue-600 {
+  color: #ea580c !important;
+}
+
+html[data-accent="orange"] .border-blue-600 {
+  border-color: #ea580c !important;
+}
+
+
+/* =========================================================
+   COMPACT MODE
+   ========================================================= */
+
+html.compact-mode .space-y-6 > * + * {
+  margin-top: 1rem;
+}
+
+html.compact-mode .space-y-7 > * + * {
+  margin-top: 1.25rem;
+}
+
+html.compact-mode .space-y-8 > * + * {
+  margin-top: 1.5rem;
+}
+
+html.compact-mode .p-8 {
+  padding: 1.25rem;
+}
+
+html.compact-mode .p-6 {
+  padding: 1rem;
+}
+
+
+/* =========================================================
+   DISABLE ANIMATIONS
+   ========================================================= */
+
+html.no-animations *,
+html.no-animations *::before,
+html.no-animations *::after {
+  animation-duration: 0s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0s !important;
+  scroll-behavior: auto !important;
+}
